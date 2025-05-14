@@ -2,19 +2,24 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ātarā – Assistente Ética e Inteligente</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="app.js"></script>
+  <title>Teste Ātarā</title>
 </head>
 <body>
-  <main>
-    <h1>Olá, sou Ātarā.</h1>
-    <p>Como posso ajudar você hoje?</p>
-    <input type="text" id="userInput" placeholder="Digite sua pergunta..." />
-    <button onclick="responder()">Enviar</button>
-    <div id="resposta"></div>
-  </main>
+  <input type="text" id="userInput" placeholder="Digite algo aqui..." />
+  <button onclick="responder()">Enviar</button>
+  <div id="resposta" style="margin-top: 20px; color: black;"></div>
+
+  <script>
+    function responder() {
+      const input = document.getElementById("userInput").value.trim();
+      const respostaDiv = document.getElementById("resposta");
+
+      if (input) {
+        respostaDiv.textContent = `Você disse: "${input}"`;
+      } else {
+        respostaDiv.textContent = "Digite algo para que eu possa responder.";
+      }
+    }
+  </script>
 </body>
 </html>
