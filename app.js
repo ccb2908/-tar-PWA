@@ -1,4 +1,4 @@
-function responder(console.log) {
+function responder() {
   const input = document.getElementById("userInput").value.trim();
   const respostaDiv = document.getElementById("resposta");
 
